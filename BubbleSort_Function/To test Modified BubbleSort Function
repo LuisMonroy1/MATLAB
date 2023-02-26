@@ -1,0 +1,22 @@
+clc,clear,close all
+
+%Bubble sort test
+%n=100;
+%n=1000;
+n=10000;
+x=randi(100,1,n);
+
+%Basic Bubble sort
+tic
+sorted_vector1=bubblesortBasic(x);
+elapsed_time1=toc
+
+%Modified Bubble sort
+tic
+sorted_vector2=bubblesortMod(x);
+elapsed_time2=toc
+
+%Modified Bubble sort
+tic
+sorted_vector3=insertionsort(x);
+elapsed_time3=toc

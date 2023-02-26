@@ -1,0 +1,16 @@
+function [A] = insertionsort(A)
+%this is a basic sorting function 
+%[A] = insertionsort(A)
+%
+n=numel(A);
+%size of vector
+
+for i=2:n
+    value=A(i);
+    j=i-1;
+   while j>=1 & A(j)>value
+       A(j+1)=A(j);
+       j=j-1;
+   end
+   A(j+1)=value;
+end

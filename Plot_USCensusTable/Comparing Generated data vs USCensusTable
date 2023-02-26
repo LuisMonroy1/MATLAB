@@ -1,0 +1,34 @@
+%Luis Monroy
+%Comparing Generated data vs USCensusTable
+
+clc,clear,close all;
+
+%All parameter values
+a=0.03134; b=1.5887*10^-10; P0=3929700;
+
+%function for population
+P=@(t) (a*P0*exp(a*t))./(a-b*P0+b*P0*exp(a*t));
+%all years
+years=1790:10:2010;
+
+%all time values
+tt=years-1790;
+
+%modeled population
+PP=P(tt);
+
+%plotting the Modeled data
+plot(years,PP,'linewidth',2)
+
+%All actual Census data
+P_act=[3929700 5308500 7239900 9638400 12866000 17069500 23191900 31443300 38558300 50155800 ...
+    62974700 76212200 92228500 106022000 123203000 132165000 151326000 179323000 203302000 226547000 ...
+    253339000 282496000 310384000];
+hold on
+plot(years,P_act,'r--','linewidth',2)
+grid on; box on;
+
+xlabel('years')
+ylabel('Population')
+title('year vs. population plot')
+legend('Population Model','Census Data','location','best')

@@ -1,0 +1,11 @@
+function []= gen_plot(func_handle, interval);
+%A quick way to plot a funciton
+%syntax:gen_plot(func_handle, interval);
+%
+
+plot(interval, func_handle(interval));
+grid
+
+
+%the point of function handle is to pass a function through another
+%function

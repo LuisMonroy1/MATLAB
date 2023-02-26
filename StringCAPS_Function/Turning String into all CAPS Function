@@ -1,0 +1,29 @@
+function [string]= CPE13_caps(str)
+%[string]= CPE13_caps(str)
+%
+%
+
+str= 'Hello world hello world';
+%the words for this exp.
+n=numel(str);
+%the length of str
+str= lower(str);
+%make everything lowercase
+str(1)=upper(str(1));
+%capitalize the first letter of str
+
+for i=2:n
+    %start at 2nd position untill last n (number)
+    if isspace(str(i-1)) & isletter(str(i))
+        %if there is a space before current position (i) AND the current 
+        %position (i) is a letter then goes through(capitalice current position) 
+        str(1) = upper(str(i));
+        %capitalice current position (i)
+    end
+    
+end
+%loop
+
+str
+
+%user defined function

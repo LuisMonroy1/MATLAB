@@ -1,0 +1,51 @@
+%Luis Monroy
+%For and While Loops
+%CP3.m
+
+%% Q1
+clc,clear,close all
+
+B=randi(10,[1,50]);
+%random vector with 50 integers from 1 and 10
+n=1;
+total=0;
+%counter
+while n<length(B)
+    %keep repeating untill n is no longer <B
+    if total<=50
+        total=total+B(n);
+        %add B(n) to the total
+        B(n)=0;
+    end
+    n=n+1;
+    %increase n by 1 every time the loop runs
+end
+B
+
+%% Q2
+clc,clear,close all
+
+x=[-2:0.1:5];
+%range from -2 to 5 with increments of 0.1
+
+for z=1:numel(x)
+    %this is saying from 1:71 (numel(x) is just counting the numer in x) 
+    if x(z)<=-1
+        y(z)=15;
+        %for case 1(position 1 is -2)
+    elseif x(z)<=1
+        y(z)=-5.*x(z)+10;
+        %for case 2
+    elseif x(z)<=3
+        y(z)=-10*x(z)^2+35*x(z)-20; 
+        %for case 3
+    elseif x(z)<=4
+        y(z)=-5.*x(z)+10;
+        %for case 4
+    else
+        y(z)=-10;
+        %for case 5
+    end
+end
+
+plot(x,y)

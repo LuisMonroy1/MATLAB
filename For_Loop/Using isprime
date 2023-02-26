@@ -1,0 +1,16 @@
+clc,clear,close all
+
+total=0
+%counter
+
+for n=1:1:999;
+    %from 1 to 999 increments by 1
+    if isprime(n)
+        %isprime puts a 1 when there is a prime number
+        total=n+total
+        
+    end
+end
+
+%a loop between the numbers from 1-999 that sums all of the numbers that
+%are prime

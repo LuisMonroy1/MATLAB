@@ -1,0 +1,52 @@
+%Luis Monroy
+%NumericalSolutiontoQuadraticEquationsusingif-elseif-elseSyntax
+%quad_roots.m
+
+clc,clear,close all
+
+%ax^2+bx+c=0 is the classic quadratic formula
+
+%Test Equations
+a=1;b=2;c=1;
+%a=1;b=5;c=6;
+%a=0;b=0;c=2;
+%a=0;b=0;c=0;
+%a=0;b=5;c=-10;
+
+if b>=0;
+    sgnb=1;
+%if "b>=0" then the command "sgnb" equals 1
+else
+    sgnb=-1;
+%if "b" is not ">=0" then the command "sgnb" equals -1
+end
+
+
+if (a==0)&(b==0)&(c==0);
+    q=-((b+(sgnb).*sqrt((b.^2)-(4.*a.*c)))./2);
+ %Quadratic Formula
+    x1=(q)./(a)
+    x2=(c)./(q)
+%to get x1 and x2
+    disp 'any x solves the equation'
+%case 1
+elseif (a==0)&(b==0)&(c~=0)
+    x1=[];x2=[];
+    disp 'no solution'    
+%case 2
+elseif (a==0)&(b~=0)&(c~=0)
+    x1=2;
+    m=2;
+    y=m.*x1+b
+%using slope intercept formula
+    disp 'The eqution is linear'    
+%case 3
+elseif (a~=0)
+    q=-((b+(sgnb).*sqrt((b.^2)-(4.*a.*c)))./2);
+%Quadratic Formula
+    x1=(q)./(a)
+    x2=(c)./(q)
+%to get x1 and x2
+    disp 'The equation is a quadratic equation'    
+%case 4
+end

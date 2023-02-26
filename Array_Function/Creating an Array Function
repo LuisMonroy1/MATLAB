@@ -1,0 +1,7 @@
+function [a,b,c] = newarray(x)
+%logical arrays to separate numbers 
+%[a,b,c] = newarray(x)
+%
+a=x(x>=0 & x<=9);
+b=x(x>=10 & x<=99);
+c=x(x>=100 & x<=1000);

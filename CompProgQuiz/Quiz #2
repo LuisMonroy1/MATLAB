@@ -1,0 +1,38 @@
+%Luis Monroy
+
+%% q1
+
+clc,clear
+A=magic(4)
+a=A([2,3],[2,3])
+%extract the 2x2 entries
+b=A(:,3)
+%third colum
+c=A([2:2:end],[1:2:end])
+%important! even-numbered rows & odd -numbered colums
+d=A([end:-1:1],:)
+%reserve the rows
+
+%% q2
+
+clc,clear
+x=[-4,-1,0,2,10];
+y=[-5,-2,2,5,9];
+indx=find(x>y)
+%find indices for x greater than y
+z=x(indx)
+%find the values
+
+%% q3
+
+clc,clear
+load Z.mat
+
+A=Z(:,:,3)
+%third dimension
+B=Z(2,:,2)'
+%2nd row of 2nd dimension
+C=Z(1,1,1:3)
+%row 1, clomun 1 of all three dimensions
+Z(:,3,1)=zeros(5,1)
+%replace col 3 of 1st dimension with zeros

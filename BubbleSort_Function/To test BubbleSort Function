@@ -1,0 +1,15 @@
+clc,clear,close all
+
+%Bubble sort test
+n=10000;
+x=randi(100,1,n);
+
+%Basic Bubble sort
+tic
+x1=bubblesortBasic(x);
+toc
+
+%Modified Bubble sort
+tic
+x2=bubblesortMod(x);
+toc

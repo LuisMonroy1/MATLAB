@@ -1,0 +1,55 @@
+%Luis Monroy
+
+%% option 1
+
+clc,clear,close all
+
+SA=11;
+SG=70;
+S=1;
+GS=0;
+
+if (SA>10) & (SG>=70) & (S~=GS)
+    disp 'student passes the class'
+    
+end
+
+%if student attendance is greather than 10 and student grade is greater
+%than or equal to 70 and student is not a graduate student, display
+%"student passes the class"
+
+%% option2
+clc,clear,close all
+
+SA=11;
+SG=70;
+
+GS=false;
+
+if (SA>10) & (SG>=70) & (GS~=1)
+    disp 'student passes the class'
+    
+end
+
+%if student attendance is greather than 10 and student grade is greater
+%than or equal to 70 and student is not a graduate student, display
+%"student passes the class"
+
+%% option3
+clc,clear,close all
+
+SA=11;
+SG=10;
+
+GS=false;
+
+if (SA>10) & (SG>=70) & (GS~=1)
+    disp 'student passes the class'
+else
+    disp 'student fails'
+    
+end
+
+%if student attendance is greather than 10 and student grade is greater
+%than or equal to 70 and student is not a graduate student, display
+%"student passes the class" if not display "student fails"

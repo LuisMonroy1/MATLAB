@@ -1,0 +1,21 @@
+function [value, pos] = myMin(x)
+%this is a repeat function 
+%[out] = repeat(A)
+%
+
+c=numel(x);
+value=x(1);
+%looking at first number of x
+pos=1;
+for i=2:c
+    if value>=x(i)
+        %if the minimun value (which is 1) is bigger than any other number
+        %in x
+        value=x(i);
+        %then replace that minimum value with what ever that number is
+        pos=i;
+        %then set the pos to the i of that number(which is its
+        %position)
+        
+    end
+end

@@ -1,0 +1,6 @@
+%Luis Monroy
+%Calling the swap function inside another program
+
+x=2;
+y=10
+[x,y] = swap(x,y)

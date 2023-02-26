@@ -1,0 +1,7 @@
+function [a,v] = Mycylinder(h,r)
+%In-Class15a
+%Calculates area, volume
+%[a,v] = Mycylinder(h,r)
+b=pi*r.^2;
+v=b*h;
+a=2.*pi.*r.*h+2.*b;

@@ -1,0 +1,23 @@
+%Luis Monroy
+%CPE#9
+%InClass8A.m
+
+clc,clear all,close all
+%good etiquete first line of code: clc,clear,close all
+
+%% a
+t=([0:2:100]);
+ht=(2.13.*(t.^2))-(0.0013.*(t.^4))-(0.000034.*(t.^4.751));
+t0=find(ht>=0);
+ht(t0);
+t(t0(end))
+%how many seconds it takes to hit ground
+
+%% b
+max=max(ht)
+%for the maximum height of the rocket
+
+
+%% c
+plot(t(t0),ht(t0))
+%plot of time ang height untill rocket hits ground

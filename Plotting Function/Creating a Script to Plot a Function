@@ -1,0 +1,14 @@
+%Luis Monroy
+%Creating a Script to Plot a Function
+%CPE4.m
+
+clc, clear
+x=linspace(1,100);
+y= 20*log10(2*x);
+plot (x,y)
+grid, title CPE4GraphPlot
+
+figure
+X=linspace(1,100);
+semilogx (X,y)
+grid, title CPE4GraphSemilogx

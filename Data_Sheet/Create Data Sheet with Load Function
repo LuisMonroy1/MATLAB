@@ -1,0 +1,12 @@
+%Luis Monroy
+%Histogram geyser
+%geyser.m
+
+clc, clear
+load geyserData.mat
+histogram (geyserData)
+mean (geyserData)
+median (geyserData)
+max (geyserData)
+min (geyserData)
+std (geyserData)

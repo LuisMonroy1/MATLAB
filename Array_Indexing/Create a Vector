@@ -1,0 +1,13 @@
+%Luis Monroy
+%CPE#8:Array Indexing
+%newVector.m
+
+%CLICK "RUN SECTION" ON MATLAB TO RUN
+
+clc,clear,close all
+%good etiquete first line of code: clc,clear,close all
+a=randi(5,[1,3])
+b=randi(6,[1,3])
+%using command randi() to make a random matrix for "a" and "b"
+c=[a(1),b(1),a(2),b(2),a(end),b(end)]
+%interchanging a & b for the variable c

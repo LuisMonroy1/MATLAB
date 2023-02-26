@@ -1,0 +1,20 @@
+%Luis Monroy
+
+clc,clear,close all
+
+x=0;
+y=0;
+%starting at 0 for both "x" and "y"
+
+while y<=9.8
+    %run until "y" is less than or equa to "9.8"
+    
+    y=10.*(1-exp(-x/4));
+    x=x+0.001;
+    %evertime the loop runs, increment "x" by "0.001" (use "0.001" instead
+    %of "1" to get more accurate awnser)
+    
+end
+
+x
+y

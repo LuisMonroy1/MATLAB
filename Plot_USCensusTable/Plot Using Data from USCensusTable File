@@ -1,0 +1,32 @@
+%Luis Monroy
+%United States Population Model
+%ComputerProgram1.m
+
+clc,clear,close all
+%good etiquete first line of code: clc,clear,close all
+load('UScensusTable.mat')
+a=0.03134;
+%birth rate
+b=1.5887*10^-10;
+%death rate
+P0=3929700;
+%function for population
+P=@(t) (a*P0*exp(a*t))./(a-b*P0+b*P0*exp(a*t));
+%all years
+years=1790:10:2010;
+
+%all time values
+x=years-1790;
+
+%modeled population
+y=P(x);
+
+%plotting the Modeled data
+plot(years,y)
+
+%All actual Census data
+P_act= pop;
+
+hold on
+plot(years,P_act)
+grid;

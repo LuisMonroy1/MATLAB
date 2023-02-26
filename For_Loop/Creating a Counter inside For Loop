@@ -1,0 +1,12 @@
+clc,clear,close all
+
+total=0
+for k=1:15
+    total=5.*k.^2-2*k+total
+end
+
+disp(total)
+
+%total is a counter
+
+%the total changes everytime it loops, it becomes 3 and then 19 and so on

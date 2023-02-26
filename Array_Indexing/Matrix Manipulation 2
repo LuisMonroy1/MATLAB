@@ -1,0 +1,16 @@
+%Luis Monroy
+%More Matrix Manipulation
+
+clc, clear;
+A= [7 3 2 1 -8;6 4 9 8 7;2 1 -2 3 -5;3 9 7 6 5]
+B= A([1 2 4], :)
+%a new array out of the 1st, 2nd, and 4th rows of A
+C= A(:,[end:-1:1])
+%to reverse the columns of A
+A(4,:)= A(1,:)
+%to add a copy of the first row of A to the last row
+A= [zeros(1,5);A]
+%to add a new row of ceros on top (";" means add a new row instead of
+%replace)
+S= size(A)
+%check the size of new A

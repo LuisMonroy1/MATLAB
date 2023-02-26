@@ -1,0 +1,18 @@
+%Luis Monroy
+%Manipulating Matrix
+
+%% 1
+
+A= rand(5)
+B= A(:,1)
+C= A(2,:)
+D= A(2:3, 3:4)
+E= reshape(D, 4, 1)
+
+%% 2
+
+A= rand(5)
+row= A(2,:)
+colum= A(:,4)
+A(2,:)= colum'
+A(:,4)= row'

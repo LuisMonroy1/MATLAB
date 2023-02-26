@@ -1,0 +1,9 @@
+%Luis Monroy
+%In-Class#4e:Script
+%Simplify_Script.m
+
+clc, clear
+syms x
+f=(1+(1/x)+(1/x^2))*(1+x+x^2)
+A=simplify (f)
+pretty (A)

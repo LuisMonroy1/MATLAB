@@ -1,0 +1,52 @@
+%Luis Monroy
+%Numerical Analysis; Bisection MEthod with Fucntion Handles
+%CP6.m
+
+clc,clear,close all
+
+f= @(x)((x.^2)-9);
+%f= @(x)((x.^6)-(x)-1);
+%f= @(x)((2).*(x)-exp(-x));
+%f= @(x)((x+3).*((x-1).^2));
+%f= @(x)(((20).*(x))./(200.*x.^2+1));
+%f= @(x)((16-(x.^4))./((16.*(x.^4))));
+%f= @(x)(((x.^8)-36).*((x.^7)+546).*((x.^6)-4536).*((x.^5)+22449).*((x.^4)-67284).*((x.^3)+118124).*((x.^2)-109584).*((x)+40320));
+
+gen_plot(f,[0:1:10])
+%gen_plot(f,[1:0.01:2])
+%gen_plot(f,[-10:10:100])
+%gen_plot(f,[-1000:100:1000])
+%gen_plot(f,[-10:1:10])
+%gen_plot(f,[-1:100:1000])
+%gen_plot(f,[-1000:100:1000])
+
+xL=0; xR=10;
+%xL=1; xR=2;
+%xL=-10; xR=100;
+%xL=-1000; xR=1000;
+%xL=-10; xR=10;
+%xL=-1; xR=1000;
+%xL=-1000; xR=1000;
+
+%Bisect code
+fL=f(xL);
+fR=f(xR);
+error=1;
+
+while error>0.000001
+    xM= (0.5).*(xL+xR);
+    fM= f(xM);
+    if ((fL)*(fM)) == 0
+        disp 'stop program'
+        
+    elseif ((fL)*(fM))<0
+        xR=xM;
+        
+    else
+        xL=xM;
+        
+    end
+    error=abs(f(xM));
+end
+
+xM

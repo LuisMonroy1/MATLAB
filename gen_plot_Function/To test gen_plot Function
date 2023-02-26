@@ -1,0 +1,21 @@
+%Luis Monroy
+
+clc,clear,close all
+
+gen_plot(@cpe12,[0:.01:10])
+%to run the plot of @cpe12 (with range from 0 to 10 with increments of 0.01)
+
+x1= fzero(@cpe12,[0,2])
+%for when x1 first crosses 0
+y1=cpe12(x1)
+%to test if the value gives "0" meaning it does cross at 0
+
+x2= fzero(@cpe12,[4,5])
+%for when x2 secondly crosses 0
+y2=cpe12(x2)
+%to test if the value gives "0" meaning it does cross at 0
+
+x3= fzero(@cpe12,[6,8])
+%for when x3 thirdly crosses 0
+y3=cpe12(x3)
+%to test if the value gives "0" meaning it does cross at 0

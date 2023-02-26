@@ -1,0 +1,61 @@
+%Luis Monroy
+
+%% Q1
+clc,clear,close all
+format rat
+%hilb (5)
+
+%H(i,j)=(1)/(i+j-1);
+%H(i)(j) the i and j are the rows and colums
+
+for r=1:5;
+    %for rows 1 to 5
+    for c=1:5;
+        %for colums 1 to 5
+    H(r,c)=(1)/(r+c-1);
+    
+    end
+end
+H
+
+%for two dimensional matrix
+
+%% Q2
+clc,clear,close all
+%exp(x)=1+x+((x^.2)/2)+((x.^3)/6);
+format short
+
+x=0;
+error=0;
+while error<=1;
+    %keep going untill error is greater than or equal to 1
+    Approx=1+x+((x^.2)/2)+((x.^3)/6);
+    Actual= exp(x);
+    error=((Actual-Approx)/(Approx)).*100;
+    x=x+0.01;
+end
+error
+
+%% Q3
+clc,clear,close all
+
+%x=2
+%x=15
+x=75
+
+if x<=2;
+    %when x is 2 or less
+    cost=15
+elseif x>2&x<=70;
+    %when x is in between 2 and 70
+    extra=x-2
+    cost=15+(extra.*5)
+elseif x>=70&x<=100;
+    %when x is in between 70 and 100
+    extra=x-2
+    cost=15+(extra.*5)+15
+else
+    %when x>=100
+    disp 'not accepted'
+
+end
